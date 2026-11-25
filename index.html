@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SkyLine Travel | سكاي لاين للسياحة الفاخرة ✈️</title>
+<link href="https://googleapis.com" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
+body{background:#0f172a;color:#f8fafc;line-height:1.6}
+header{background:rgba(15,23,42,.96);padding:14px 5%;border-bottom:2px solid #0ea5e9;position:sticky;top:0;z-index:100}
+.top-nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.logo{font-size:24px;font-weight:900;color:#38bdf8;cursor:pointer}
+nav{display:flex;gap:8px;flex-wrap:wrap}
+nav button{background:#1e293b;color:#e2e8f0;border:1px solid #334155;padding:6px 13px;border-radius:20px;font-weight:700;cursor:pointer;font-size:13px;transition:.3s}
+nav button.act,nav button:hover{background:#0ea5e9;color:#0f172a;border-color:#0ea5e9}
+.page{display:none;padding:40px 6%;max-width:1200px;margin:auto;animation:fade .3s}
+.page.show{display:block}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.hero{background:linear-gradient(rgba(15,23,42,.55),rgba(15,23,42,.85)),url('هنا_ياسعيد_صورة_الواجهة.jpg') center/cover;padding:85px 25px;border-radius:22px;text-align:center;border:1px solid #38bdf8;margin-bottom:35px}
+.hero h1{font-size:42px;color:#fff;font-weight:900;margin-bottom:12px}
+.hero p{font-size:18px;color:#cbd5e1;max-width:650px;margin:0 auto 25px}
+.btn{background:#0ea5e9;color:#0f172a;padding:12px 28px;border-radius:25px;border:none;font-weight:900;cursor:pointer;text-decoration:none;display:inline-block;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:25px;margin-top:25px}
+.card{background:#1e293b;border-radius:16px;overflow:hidden;border:1px solid #334155;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:#38bdf8}
+.card img{width:100%;height:220px;object-fit:cover}
+.cb{padding:20px}
+.cb h3{color:#38bdf8;font-size:20px;margin-bottom:8px}
+.cb p{color:#cbd5e1;font-size:14px;margin-bottom:15px}
+.wa-link{display:block;text-align:center;background:#25D366;color:#fff;padding:10px;border-radius:10px;text-decoration:none;font-weight:700}
+.sec-h{text-align:center;font-size:32px;color:#38bdf8;margin-bottom:8px}
+.sec-p{text-align:center;color:#94a3b8;margin-bottom:25px}
+.contact-box{background:#1e293b;padding:35px;border-radius:18px;max-width:650px;margin:auto;text-align:center;border:1px solid #38bdf8}
+footer{text-align:center;padding:22px;background:#020617;color:#64748b;margin-top:50px;font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top-nav">
+    <div class="logo" onclick="go('p1',0)">✈️ SkyLine Travel</div>
+    <nav id="menu">
+      <button class="act" onclick="go('p1',0)">1. الرئيسية</button>
+      <button onclick="go('p2',1)">2. رحلات داخلية</button>
+      <button onclick="go('p3',2)">3. رحلات دولية</button>
+      <button onclick="go('p4',3)">4. شهر العسل</button>
+      <button onclick="go('p5',4)">5. فنادق 5 نجوم</button>
+      <button onclick="go('p6',5)">6. عروض الموسم</button>
+      <button onclick="go('p7',6)">7. احجز وتواصل</button>
+    </nav>
+  </div>
+</header>
+
+<!-- الصفحة 1: الرئيسية -->
+<div id="p1" class="page show">
+  <div class="hero">
+    <h1>اكتشف العالم مع SkyLine Travel 🌍</h1>
+    <p>نأخذك في رحلات سياحية استثنائية حول العالم بأفضل الأسعار وخدمات VIP متكاملة من لحظة انطلاقك وحتى عودتك.</p>
+    <button class="btn" onclick="go('p3',2)">استكشف الرحلات الدولية ←</button>
+  </div>
+  <h2 class="sec-h">وجهاتنا الأكثر طلباً</h2>
+  <div class="grid">
+    <div class="card"><img src="1.jpg"><div class="cb"><h3>شرم الشيخ والغردقة</h3><p>إقامة شاملة في أرقى المنتجعات الشاطئية مع رحلات يخت وغوص.</p><a class="wa-link" href="https://wa.me" target="_blank">احجز عبر واتساب 💬</a></div></div>
+    <div class="card"><img src="2.jpg"><div class="cb"><h3>دبي - مدينة المستقبل</h3><p>5 أيام تشمل الطيران والفندق وزيارة برج خليفة ورحلة سفاري.</p><a class="wa-link" href="https://wa.me" target="_blank">احجز عبر واتساب 💬</a></div></div>
+  </div>
+</div>
+
+<!-- الصفحة 2: رحلات داخلية -->
+<div id="p2" class="page">
+  <h2 class="sec-h">🏖️ الرحلات الداخلية</h2>
+  <p class="sec-p">استمتع بأجمل شواطئ ومعالم مصر الساحرة</p>
+  <div class="grid">
+    <div class="card"><img src="3.jpg"><div class="cb"><h3>دهب والبلو هول</h3><p>مغامرات التخييم والغوص في أجمل بقاع البحر الأحمر.</p><a class="wa-link" href="https://wa.me" target="_blank">استفسر عبر واتساب 💬</a></div></div>
+    <div class="card"><img src="4.jpg"><div class="cb"><h3>نايل كروز الأقصر وأسوان</h3><p>رحلة نيلية فاخرة لمدة 4 ليالي شاملة المزارات الأثرية.</p><a class="wa-link" href="https://wa.me" target="_blank">استفسر عبر واتساب 💬</a></div></div>
+  </div>
+</div>
+
+<!-- الصفحة 3: رحلات دولية -->
+<div id="p3" class="page">
+  <h2 class="sec-h">🌍 الرحلات الدولية</h2>
+  <p class="sec-p">جولات سياحية منظمة لأشهر عواصم العالم</p>
+  <div class="grid">
+    <div class="card"><img src="5.jpg"><div class="cb"><h3>باريس - فرنسا</h3><p>أسبوع ساحر في مدينة النور يشمل الإقامة وجولات المعالم.</p><a class="wa-link" href="https://wa.me" target="_blank">استفسر عبر واتساب 💬</a></div></div>
+    <div class="card"><img src="6.jpg"><div class="cb"><h3>إسطنبول وطرابزون</h3><p>طبيعة خلابة ورحلات البوسفور مع مرشد سياحي خاص.</p><a class="wa-link" href="https://wa.me" target="_blank">استفسر عبر واتساب 💬</a></div></div>
+  </div>
+</div>
+
+<!-- الصفحة 4: شهر العسل -->
+<div id="p4" class="page">
+  <h2 class="sec-h">💍 باقات شهر العسل</h2>
+  <p class="sec-p">ذكريات رومانسية لا تُنسى في أجمل جزر العالم</p>
+  <div class="grid">
+    <div class="card"><img src="7.jpg"><div class="cb"><h3>جزر المالديف</h3><p>فيلا خاصة فوق الماء مع عشاء رومانسي على الشاطئ.</p><a class="wa-link" href="https://wa.me" target="_blank">احجز باقتك عبر واتساب 💬</a></div></div>
+    <div class="card"><img src="8.jpg"><div class="cb"><h3>جزيرة بالي - إندونيسيا</h3><p>منتجعات وسط الغابات الاستوائية وشلالات الطبيعة.</p><a class="wa-link" href="https://wa.me" target="_blank">احجز باقتك عبر واتساب 💬</a></div></div>
+  </div>
+</div>
+
+<!-- الصفحة 5: فنادق 5 نجوم -->
+<div id="p5" class="page">
+  <h2 class="sec-h">🏨 حجز الفنادق والمنتجعات</h2>
+  <p class="sec-p">شراكات حصرية مع أفخم الفنادق العالمية</p>
+  <div class="grid">
+    <div class="card"><img src="9.jpg"><div class="cb"><h3>منتجع رويال بالم 5 نجوم</h3><p>إطلالة مباشرة على البحر مع أجنحة ملكية وسبا.</p><a class="wa-link" href="https://wa.me" target="_blank">احجز غرفتك عبر واتساب 💬</a></div></div>
+    <div class="card"><img src="10.jpeg"><div class="cb"><h3>فندق سكاي تاور الفاخر</h3><p>في قلب المدينة مع مسبح بانورامي في الطابق الأخير.</p><a class="wa-link" href="https://wa.me" target="_blank">احجز غرفتك عبر واتساب 💬</a></div></div>
+  </div>
+</div>
+
+<!-- الصفحة 6: عروض الموسم -->
+<div id="p6" class="page">
+  <h2 class="sec-h">🔥 عروض وخصومات الموسم</h2>
+  <p class="sec-p">احجز مبكراً واستفد بخصومات تصل إلى 30%</p>
+  <div class="grid">
+    <div class="card"><img src="12.jpg"><div class="cb"><h3>عرض العائلات (4 أفراد)</h3><p>إقامة مجانية للأطفال مع انتقالات مجانية من وإلى المطار.</p><a class="wa-link" href="https://wa.me" target="_blank">اطلب العرض عبر واتساب 💬</a></div></div>
+    <div class="card"><img src="11.jpeg"><div class="cb"><h3>باقة نهاية الأسبوع السريعة</h3><p>3 أيام شاملة الانتقالات والإقامة بأسعار تنافسية.</p><a class="wa-link" href="https://wa.me" target="_blank">اطلب العرض عبر واتساب 💬</a></div></div>
+  </div>
+</div>
+
+<!-- الصفحة 7: احجز وتواصل -->
+<div id="p7" class="page">
+  <div class="contact-box">
+    <h2 style="color:#38bdf8;margin-bottom:12px">📞 تواصل معنا واحجز رحلتك</h2>
+    <p style="color:#cbd5e1;margin-bottom:20px">فريق خدمة العملاء جاهز للرد على استفساراتكم وتصميم برنامجكم السياحي على مدار الساعة.</p>
+    <p style="margin-bottom:25px">📍 المقر الرئيسي: القاهرة - مصر الجديدة<br>⏰ مواعيد العمل: يومياً من 9 صباحاً حتى 11 مساءً</p>
+    <a class="btn" style="background:#25D366;color:#fff;font-size:18px" href="https://wa.me" target="_blank">تحدث معنا مباشرة على واتساب 💬</a>
+  </div>
+</div>
+
+<footer>© 2026 SkyLine Travel - جميع الحقوق محفوظة ✈️</footer>
+
+<script>
+function go(id,idx){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));
+  document.querySelectorAll('#menu button').forEach(b=>b.classList.remove('act'));
+  document.getElementById(id).classList.add('show');
+  document.querySelectorAll('#menu button')[idx].classList.add('act');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
